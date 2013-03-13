@@ -55,12 +55,120 @@ int division(double j, double k, double l)
 
 }
 
+/* Finding opposite with sine function */
+
+int oppsin(double m, double n, double o)
+{
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&m);
+	printf("Enter angle:");
+	scanf("%lf",&n);
+	o = m * sin (n);
+	printf("The opposite length is: %lf\n\n",o);
+}
+
+/* Finding hypotenuse with sine function */
+
+int hypsin(double p, double q, double r)
+{
+	printf("Enter opposite length:");
+	scanf("%lf",&p);
+	printf("Enter angle:");
+	scanf("%lf",&q);
+	r = p / sin (q);
+	printf("The hypotenuse length is: %lf\n\n",r);
+}
+
+/* Finding angle with sine function */
+
+int arcsin(double s, double t, double u)
+{
+	printf("Enter opposite length:");
+	scanf("%lf",&s);
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&t);
+	u = asin (s/t);
+	printf("The angle is: %lf\n\n",u);
+}
+
+/* Finding adjsent with cosine function */
+
+int adjcos(double v, double w, double x)
+{
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&v);
+	printf("Enter angle:");
+	scanf("%lf",&w);
+	x = v * sin (w);
+	printf("The adjsent length is: %lf\n\n",x);
+}
+
+/* Finding hypotenuse with cosine function */
+
+int hypcos(double y, double z, double A)
+{
+	printf("Enter opposite length:");
+	scanf("%lf",&y);
+	printf("Enter angle:");
+	scanf("%lf",&z);
+	A = y / sin (z);
+	printf("The hypotenuse length is: %lf\n\n",A);
+}
+
+/* Finding angle with cosine function */
+
+int arccos(double B, double C, double D)
+{
+	printf("Enter adjsent length:");
+	scanf("%lf",&B);
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&C);
+	D = acos (B/C);
+	printf("The angle is: %lf\n\n",D);
+}
+
+/* Finding opposite with tangent function */
+
+int opptan(double E, double F, double G)
+{
+	printf("Enter adjsent length:");
+	scanf("%lf",&E);
+	printf("Enter angle:");
+	scanf("%lf",&F);
+	G = E * tan(F);
+	printf("The angle is: %lf\n\n",G);
+}
+
+/* Finding angle with cosine function */
+
+int adjtan(double H, double I, double J)
+{
+	printf("Enter adjsent length:");
+	scanf("%lf",&H);
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&I);
+	J = H / tan(I);
+	printf("The angle is: %lf\n\n",J);
+}
+
+/* Finding angle with cosine function */
+
+int arctan(double K, double L, double M)
+{
+	printf("Enter adjsent length:");
+	scanf("%lf",&K);
+	printf("Enter hypotenuse length:");
+	scanf("%lf",&L);
+	M = acos (K/L);
+	printf("The angle is: %lf\n\n",M);
+}
+
 /* Complete Calculator */
 
 int main(void) 
 {
 	int count;
-	double a, b, c, d, e, f, g, h, i, j, k, l;
+	double a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M;
 	char fct;
 	do
 	{
@@ -69,8 +177,17 @@ int main(void)
 		printf("a=addition\n");
 		printf("b=subtraction\n");
 		printf("c=multiplication\n");
-		printf("d=division\n\n");
-		fct=getch();
+		printf("d=division\n");
+		printf("e=oppsin\n");
+		printf("f=hypsin\n");
+		printf("g=arcsin\n");
+		printf("h=adjcos\n");
+		printf("i=hypcos\n");
+		printf("j=arccos\n");
+		printf("k=opptan\n");
+		printf("l=hyptan\n");
+		printf("m=arctan\n");
+		fct=getchar();
 		if(fct == 'a')
 		{
 			addition(a, b, c);	
@@ -87,10 +204,47 @@ int main(void)
 		{
 			division(j, k, l);
 		}
+		else if(fct == 'e')
+		{
+			oppsin(m, n, o);
+		}
+		else if(fct == 'f')
+		{
+			hypsin(p, q, r);
+		}
+		else if(fct == 'g')
+		{
+			arcsin(s, t, u);
+		}
+		else if(fct == 'h')
+		{
+			adjcos(v, w, x);
+		}
+		else if(fct == 'i')
+		{
+			hypcos(y, z, A);
+		}
+		else if(fct == 'j')
+		{
+			arccos(B, C, D);
+		}
+		else if(fct == 'k')
+		{
+			opptan(E, F, G);
+		}
+		else if(fct == 'l')
+		{
+			adjtan(H, I, J);
+		}
+		else if(fct == 'm')
+		{
+			arctan(K, L, M);
+		}
 		else
 		{
-			printf("Learn to spell!\n4\n");
+			printf("Learn to spell!\n\n");
 		}
+		getchar();
 	}
 	while(count++<100);
 	return(0);
